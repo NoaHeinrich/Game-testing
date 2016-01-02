@@ -6,7 +6,6 @@ $(document).ready(function(){
   var color = "#FF0000";
   ctx.fillStyle = color;
   ctx.fillRect(x,y,25,25);
-
   $(document).on("keydown", function(event){
     event.preventDefault();
     var code = event.keyCode;
@@ -30,7 +29,7 @@ $(document).ready(function(){
     ctx.closePath();
     if(x > 0 && direction === "left"){
       x += -15;
-    } else if(y > 0 && direction === "up"){
+    } else if(y > 200 && direction === "up"){
       y += -15;
     } else if(x + 10 < canvas.width - 20 && direction === "right"){
       x += 15
