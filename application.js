@@ -9,7 +9,7 @@ $(document).ready(function(){
   $(document).on("keydown", function(event){
     event.preventDefault();
     var code = event.keyCode;
-    if(code===37){
+    if(code === 37){
       draw("left")
     } else if(code === 38){
       draw("up")
@@ -17,7 +17,11 @@ $(document).ready(function(){
       draw("right")
     } else if(code === 40){
       draw("down")
+    } else if(code === 90){
+      inspect()
     }
+    console.log(x)
+    console.log(y)
   })
 
   var draw = function(direction){
@@ -35,6 +39,18 @@ $(document).ready(function(){
       x += 15
     } else if(y + 10 < canvas.height - 20 && direction === "down"){
       y += 15
+    }
+  }
+
+  var inspect = function(){
+    if(240 <= x && x <= 300 && y >= 175){
+      $("#one").fadeIn(2000);
+    } else if(135 <= x && x <= 230 && 240 <= y && y <= 315) {
+      $("#two").fadeIn(2000);
+    } else if(690 <= x && x <= 770 && 240 <= y && y <= 290) {
+      $("#three").fadeIn(2000);
+    } else if(725 <= x && x <= 820 && y >= 375) {
+      $("#four").fadeIn(2000);
     }
   }
 })
