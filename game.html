@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="application.js"></script>
+  <script src="controller.js"></script>
+  <link rel="stylesheet" type="text/css" href="application.css">
+
+
+</head>
+<body>
+  <h1>Use the arrow keys to move, and z to inspect</h1>
+  <canvas id="canvas" width="1000" height ="450" style="border:1px solid #000000;"></canvas>
+  <div id ="ozymandias">
+    <p class="poem" id="one">I met a traveller from an antique land<br>
+    Who said: Two vast and trunkless legs of stone<br>
+    Stand in the desert. Near them on the sand,<br>
+    Half sunk, a shattered visage lies, whose frown</p>
+    <p class="poem" id="two">And wrinkled lip and sneer of cold command<br>
+    Tell that its sculptor well those passions read<br>
+    Which yet survive, stamped on these lifeless things,<br>
+    The hand that mocked them and the heart that fed.</p>
+    <p class="poem" id="three">And on the pedestal these words appear:<br>
+    `My name is Ozymandias, King of Kings:<br>
+    Look on my works, ye mighty, and despair!'</p>
+    <p class="poem" id="four">Nothing beside remains. Round the decay<br>
+    Of that colossal wreck, boundless and bare,<br>
+    The lone and level sands stretch far away".
+    </p>
+  </div>
+  <audio autoplay loop>
+    <source src="./audio/ghost_town_wind.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="bell">
+    <source src="./audio/bell.mp3">
+  </audio>
+</body>
+</html>

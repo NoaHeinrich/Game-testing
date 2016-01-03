@@ -1,0 +1,11 @@
+#canvas {
+  background-image: url("./images/desert_bkg x.png");
+}
+
+.poem {
+  display: none;
+}
+
+#ozymandias {
+  float: right;
+}
