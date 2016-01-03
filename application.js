@@ -4,8 +4,10 @@ $(document).ready(function(){
   var x = canvas.width/3;
   var y = 300;
   var color = "#FF0000";
+  var counter = 0;
   ctx.fillStyle = color;
   ctx.fillRect(x,y,25,25);
+
   $(document).on("keydown", function(event){
     event.preventDefault();
     var code = event.keyCode;
@@ -20,8 +22,6 @@ $(document).ready(function(){
     } else if(code === 90){
       inspect()
     }
-    console.log(x)
-    console.log(y)
   })
 
   var draw = function(direction){
@@ -45,12 +45,16 @@ $(document).ready(function(){
   var inspect = function(){
     if(240 <= x && x <= 300 && y >= 175){
       $("#one").fadeIn(2000);
+      $("#bell").trigger("play");
     } else if(135 <= x && x <= 230 && 240 <= y && y <= 315) {
       $("#two").fadeIn(2000);
+      $("#bell").trigger("play");
     } else if(690 <= x && x <= 770 && 240 <= y && y <= 290) {
       $("#three").fadeIn(2000);
+      $("#bell").trigger("play");
     } else if(725 <= x && x <= 820 && y >= 375) {
       $("#four").fadeIn(2000);
+      $("#bell").trigger("play");
     }
   }
 })
